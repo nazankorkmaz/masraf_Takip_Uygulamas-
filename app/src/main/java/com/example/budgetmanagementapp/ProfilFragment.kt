@@ -43,6 +43,8 @@ class ProfilFragment : Fragment() {
 
         setupSignOut()
 
+
+
         binding.bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.icon_home -> {
@@ -52,8 +54,13 @@ class ProfilFragment : Fragment() {
                 else -> false
             }
         }
+        val email = getUserEmail()
+        binding.textViewMail.text = email
 
+    }
 
+    private fun getUserEmail(): String? {
+        return sharedPreferences.getString("user_email", null)
     }
 
     private fun setupSignOut() {
@@ -88,7 +95,5 @@ class ProfilFragment : Fragment() {
         editor.remove("user_email")
         editor.apply()
     }
-
-
 
 }

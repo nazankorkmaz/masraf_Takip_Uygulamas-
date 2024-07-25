@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_profilFragment"
             app:destination="@id/profilFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_harcamaAtmaFragment"
+            app:destination="@id/harcamaAtmaFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -34,6 +37,7 @@
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        />
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
@@ -54,6 +58,15 @@
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_profilFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/harcamaAtmaFragment"
+        android:name="com.example.budgetmanagementapp.HarcamaAtmaFragment"
+        android:label="fragment_harcama_atma"
+        tools:layout="@layout/fragment_harcama_atma" >
+        <action
+            android:id="@+id/action_harcamaAtmaFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

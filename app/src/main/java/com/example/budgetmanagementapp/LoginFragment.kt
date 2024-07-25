@@ -25,7 +25,7 @@ class LoginFragment : Fragment() {
     private  val binding get()= _binding!!
     private lateinit var  auth : FirebaseAuth
 
-
+    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var googleSignInClient: GoogleSignInClient
 
     private val googleSignInLauncher = registerForActivityResult(
@@ -48,6 +48,9 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         auth = FirebaseAuth.getInstance()
 
+        sharedPreferences = requireContext().getSharedPreferences("user_prefs", Context.MODE_PRIVATE)
+        val savedEmail = sharedPreferences.getString("user_email", "")
+        binding.editTextEmail.setText(savedEmail)
 
         val currentUser = auth.currentUser
 
