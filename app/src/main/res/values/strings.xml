@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BudgetManagementApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="default_web_client_id">928024383603-on7ggq51horsur0e5v8av3h2m4vncgmt.apps.googleusercontent.com</string>
+</resources>
+
